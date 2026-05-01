@@ -122,7 +122,7 @@ def load_my_model():
     from huggingface_hub import hf_hub_download
     from tensorflow.keras.models import load_model
 
-    token      = st.secrets.get("HF_TOKEN", None) or os.environ.get("HF_TOKEN")
+    token = os.environ.get("HF_TOKEN")
     model_path = hf_hub_download(
         repo_id  = "Ashleyyy04/Audiodetectionh5",
         filename = "deepfake_model.h5",
